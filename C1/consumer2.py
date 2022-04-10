@@ -5,7 +5,7 @@ producer3 = client.create_producer('DEtopic3')
 while(True):
     msg = consumer.receive()
     try:
-        print(msg.data().decode('utf-8').upper())
+        #send upper-cased words
         producer3.send((msg.data().decode('utf-8').upper()).encode('utf-8'))
         
     # Acknowledge for receiving the message  

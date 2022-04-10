@@ -7,7 +7,7 @@ sentence = ''
 while(True):
     msg = consumer.receive()
     try:
-        
+        #merge upper-cased words into a sentence 
         sentence = sentence + msg.data().decode('utf-8') + ' '
     
         consumer.acknowledge(msg)
